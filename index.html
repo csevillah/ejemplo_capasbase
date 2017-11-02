@@ -36,6 +36,14 @@
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'
 	      
 });
+      var Thunderforest_SpinalMap = L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	apikey: '<your apikey>',
+	maxZoom: 22
+});
+	    
+	    
+	    
       osm.addTo(mapa);
       // retorna un color con base en la cantidad de especies
       function color(d) {
@@ -74,7 +82,8 @@
 	             
       var baseLayers = {
 	       "OpenStreetMap": osm,
-	       "Mapbox":mbox      
+	       "Mapbox":mbox,  
+	       " Thunder Forest":  Thunderforest_SpinalMap
       };
       var overlays = {
 	    "Cantones de CR": poblaCanton,
