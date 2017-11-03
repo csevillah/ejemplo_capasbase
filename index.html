@@ -50,12 +50,9 @@
      });
 	    
 	  // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
-      var EsriTerrain = L.tileLayer.provider('Esri.WorldTerrain');
+      var EsriTerrain = L.tileLayer.provider('Esri.WorldTerrain');	    
+      EsriTerrain.addTo(mapa);
 	    
-	  
-  
-	    
-      osm.addTo(mapa);
       // retorna un color con base en la cantidad de especies
       function color(d) {
 	return d > 250000 ? '#b30000' :
