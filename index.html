@@ -49,6 +49,9 @@
 	ext: 'png'
      });
 	    
+	  // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
+      var EsriTerrain = L.tileLayer.provider('Esri.WorldTerrain');
+  
 	    
       osm.addTo(mapa);
       // retorna un color con base en la cantidad de especies
@@ -90,7 +93,8 @@
 	       "OpenStreetMap": osm,
 	       "Mapbox":mbox,  
 	       "Topo Map":  OpenTopoMap,
-	       "Stamen Water Color":Stamen_Watercolor
+	       "Stamen Water Color":Stamen_Watercolor,
+	       "Esri Wold Terrain":EsriTerrain
       };
       var overlays = {
 	    "Cantones de CR": poblaCanton,
